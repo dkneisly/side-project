@@ -1,28 +1,31 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# General Information #
 
-Things you may want to cover:
+## Technologies ##
+* Rails Version 4.2.0
+* Ruby Version 1.9.3p545
+* PostgreSQL Database
+* Bootstrap 4
+* JQuery/D3.js
 
-* Ruby version
+## Goals ##
+Provide users a socially engaging outlet for achieving objectively-defined goals
 
-* System dependencies
+## Developers ##
+* Dave Kneisly
+* Connor Brogan
 
-* Configuration
+# Getting Started #
 
-* Database creation
+## Startup ##
 
-* Database initialization
+### Development ###
+```
+$ rails server
+```
+Access via url: localhost:3000/
 
-* How to run the test suite
+### Production ###
+Access via url: https://hidden-sands-75490.herokuapp.com/
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
