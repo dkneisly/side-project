@@ -39,11 +39,11 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'will_paginate', '~> 3.0.6'
 
 # Use bootstrap
-gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'bootstrap-sass', '~> 3.2.0'
 
 # Use tether for bootstrap tooltips and popovers
 #source 'http://rails-assets.org' do
-#  gem 'rails-assets-tether', '>= 1.1.0'
+gem 'rails-assets-tether', '>= 1.1.0'
 #end
 
 #fix for gems that require ruby 2.0+

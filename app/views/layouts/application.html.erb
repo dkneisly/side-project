@@ -3,11 +3,36 @@
 <head>
   <title>SideProject</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag "welcome" if params[:controller] === 'welcome' %>
+  <%= stylesheet_link_tag "welcome" %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to 'SideProject', welcome_index_path, :class=> 'navbar-brand' %>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="<%= active(welcome_index_path) %>"><%= link_to 'Home', welcome_index_path %></li>
+        <li class="<%= active(welcome_features_path) %>"><%= link_to 'Features', welcome_features_path %></li>
+        <li class="<%= active(welcome_contact_path) %>"><%= link_to 'Contact', welcome_contact_path %></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="<%= active(welcome_log_in_path) %>"><%= link_to 'Log in', welcome_log_in_path %></li>
+        <li class="<%= active(welcome_sign_up_path) %>"><%= link_to 'Sign up', welcome_sign_up_path %></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
 
 <%= yield %>
 
