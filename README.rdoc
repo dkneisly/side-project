@@ -8,6 +8,7 @@
 * PostgreSQL Database
 * Bootstrap 4
 * JQuery/D3.js
+* Python 2.7.11
 
 ## Goals ##
 Provide users a socially engaging outlet for achieving objectively-defined goals
