@@ -1,0 +1,6 @@
+<div class="navbar-padding"></div>
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+<%= image_tag @user.gravatar_url %>
+<p class="lead"><%= @user.email %></p>

@@ -6,6 +6,7 @@ class WelcomeController < ApplicationController
   def contact
   end
   def sign_up
+    @user = User.new
   end
   def log_in
   end

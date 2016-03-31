@@ -46,9 +46,12 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'rails-assets-tether', '>= 1.1.0'
 #end
 
-#fix for gems that require ruby 2.0+
+# Fix for gems that require ruby 2.0+
 gem 'mime-types', '2.99.1', group: :production
 gem 'autoprefixer-rails', '6.1.1'
+
+# Use gravitar image
+gem 'gravtastic'
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
