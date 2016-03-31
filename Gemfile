@@ -8,6 +8,9 @@ gem 'rails', '4.2.0'
 gem 'pg'
 # Enable features such as static asset serving and logging on production platform
 gem 'rails_12factor', group: :production
+# Use puma as the server
+gem 'puma', '3.1.0', group: :production
+gem 'webrick', group: :development
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
