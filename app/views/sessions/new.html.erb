@@ -1,0 +1,31 @@
+<div class="navbar-padding"></div>
+<div class="navbar-padding"></div>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1 class="text-center">Log in</h1>
+    
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+    
+    <%= form_for(:session, url: log_in_path) do |f| %>
+
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.submit "Log in", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+
+    <p>New user? <%= link_to "Sign up", welcome_sign_up_path %></p>
+  </div>
+</div>

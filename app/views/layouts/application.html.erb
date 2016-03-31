@@ -22,13 +22,28 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
+      <% if logged_in? %>
+        
+      <% else %>
         <li class="<%= active(welcome_index_path) %>"><%= link_to 'Home', welcome_index_path %></li>
         <li class="<%= active(welcome_features_path) %>"><%= link_to 'Features', welcome_features_path %></li>
         <li class="<%= active(welcome_contact_path) %>"><%= link_to 'Contact', welcome_contact_path %></li>
+      <% end %>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="<%= active(welcome_log_in_path) %>"><%= link_to 'Log in', welcome_log_in_path %></li>
+      <% if logged_in? %>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Profile", current_user %></li>
+            <li><%= link_to "Settings", '#' %></li>
+          </ul>
+        </li>
+        <li><%= link_to "Log out", log_out_path, method: "delete" %></li>
+      <% else %>
+        <li class="<%= active(log_in_path) %>"><%= link_to 'Log in', log_in_path %></li>
         <li class="<%= active(welcome_sign_up_path) %>"><%= link_to 'Sign up', welcome_sign_up_path %></li>
+      <% end %>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
