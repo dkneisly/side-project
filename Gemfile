@@ -40,6 +40,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use pagination gem
 gem 'will_paginate', '~> 3.0.6'
+gem 'bootstrap-will_paginate', '0.0.10'
 
 # Use bootstrap
 gem 'bootstrap-sass', '~> 3.2.0'
@@ -56,10 +57,15 @@ gem 'autoprefixer-rails', '6.1.1'
 # Use gravitar image
 gem 'gravtastic'
 
+# Create fake data to fill database
+gem 'faker', '1.6.3'
+
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
   gem 'debugger'
+end
 
+group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 end
